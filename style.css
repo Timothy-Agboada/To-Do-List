@@ -1,0 +1,125 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 15px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 550px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    text-align: center;
+    color: #4a4a4a;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#task-form {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#task-input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.3);
+}
+
+#add-task-btn {
+    width: 60px;
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.task-item.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+.task-item span {
+    flex-grow: 1;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.task-item.completed {
+    background-color: #f1f3f5;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+
+.task-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 15px;
+    color: #ced4da;
+    transition: color 0.3s;
+}
+
+.task-item .complete-btn:hover {
+    color: #28a745; /* Green */
+}
+
+.task-item .delete-btn:hover {
+    color: #e03131; /* Red */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.9); }
+}
