@@ -38,7 +38,7 @@ To run this project on your local machine, please follow these simple steps:
 
 1.  **Clone the repository (or download the code):**
     ```bash
-    git clone [https://github.com/timothy-agboada/todo-list-app.git](https://github.com/timothy-agboada/todo-list-app.git)
+    git clone https://github.com/timothy-agboada/todo-list-app.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
